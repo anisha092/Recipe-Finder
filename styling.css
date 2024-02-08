@@ -1,0 +1,28 @@
+#logo img{
+    width: 150px;
+    height: auto;
+}
+
+#RecipeInput{
+    border-radius: 15px;
+    width: 250px;
+    height: auto;
+
+}
+#btn{
+    border-radius: 15px;
+}
+
+body {
+    position: relative;
+}
+
+#Display{
+    position: absolute;
+    top: 40%;
+    bottom: 50%;
+    margin-left: 600px;
+    color: white;
+    font-family: cursive;
+}
+
