@@ -36,7 +36,7 @@ const fetchApi=()=>{
         
     })
     .catch(error=>{
-      console.log('Error fetching');
+      console.log('Error fetching',error);
     });
 
 }
