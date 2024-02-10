@@ -55,6 +55,49 @@ body {
     margin-left: auto;
 }
 
+#mynavbar{
+    margin-left: 40%;
+}
+
+#card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: black;
+    color: white;
+}
+
+#card img {
+    width: 100%;
+    height: auto;
+}
+
+#RecipeContainer {
+    margin-top: 20px; /* Adjust as needed */
+}
+
+#Display2 {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-family: cursive;
+    text-align: center;
+}
+
+#Card1{
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: cursive;
+    text-align: center;
+    width: 10%;
+    height: 1%;
+
+}
 
 
 
