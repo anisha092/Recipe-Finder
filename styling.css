@@ -33,12 +33,13 @@ body {
 
 #Display {
     position: absolute;
-    top: 50%;
+    top: 35%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
     font-family: cursive;
     text-align: center;
+    margin-bottom: 300px;
 }
 
 #navbar {
@@ -57,6 +58,7 @@ body {
 
 #mynavbar{
     margin-left: 40%;
+    
 }
 
 #card {
@@ -73,9 +75,6 @@ body {
     height: auto;
 }
 
-#RecipeContainer {
-    margin-top: 20px; /* Adjust as needed */
-}
 
 #Display2 {
     position: absolute;
@@ -98,6 +97,40 @@ body {
     height: 1%;
 
 }
+.card {
+    background-size: cover;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.card-body {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    text-align: center;
+}
+
+#RecipeContainer {
+    margin-top: 20px;
+    z-index: 1; 
+    background-image: url("https://hungerbay.com/assets/images/b6.jpg");
+}
+#ImgApi{
+    margin-left: 400px;
+    margin-top: 10px;
+}
+
+#titleApi{
+    color: white;
+    margin-left: 450px;
+    font-family: cursive;
+}
+#ApiData{
+    color: white;
+    margin-left: 300px;
+    font-family: cursive;
+
+}
+
 
 
 
