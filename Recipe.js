@@ -1,7 +1,9 @@
 const KeyApi = '1846dbefe6e04288a4b2a810d0dcf6fe';
 
 
-const fetchApi = () => {
+const fetchApi = (event) =>
+ {
+  event.preventDefault();
   let recipeInp = document.getElementById('RecipeInput');
   let RecipeContainer=getElementById("RecipeContainer");
   let recipe=recipeInp.value;
@@ -37,6 +39,27 @@ const displayRelatedRecipes = (recipes) => {
       `).join('')}
       <div/>
       `;
+    }
+
+    const displayRecipeDetails=(id)=>{
+      fetch`https://api.spoonacular.com/recipes/=${id}/information?apiKey=${KeyApi}`
+      .then(response=>response.json())
+      .then(recipe=>{
+        const RecipeData=document.getElementById(RecipeContainer);
+        RecipeData.innerHTML=`
+         <h3 id="titleApi"> ${recipe.title}<h3/>
+         <img src="${recipe.image}" alt="${recipe.title}" class="ImgApi"></img>
+         <div class="ApiData">
+         <p class="card-text"> <p/>
+         <h4>Instructions for Recipe <h4/>
+         <p>${recipe.instructions}<p/>
+
+         <div/>
+        `
+      })
+      .catch(error=>{
+        console.log("Error fetching recipe Details", error);
+      })
     }
     
 
