@@ -1,23 +1,117 @@
-#logo img{
-    width: 150px;
+
+body{
+    font-family: 'Roboto',sans-serif;
+    font-size: 100%;
+    font-weight: 410;
+}
+
+
+.navbar-brand img{
+    width: 120px;
     height: auto;
+    margin-right: 100px;
 }
 
-#RecipeInput{
-    border-radius: 15px;
-    width: 250px;
-    height: auto;
+h1 {
+    font-size: 58px;
+    font-weight: 900;
+    margin-bottom: 1rem;
+    color: white;
+    text-shadow: 1px 0 6px #000;
+  }
+  
+  h1 span {
+    color: #FFC222;
+  }
+  
+  h2 {
+    font-weight: 700;
+    font-size: 2rem;
+    text-transform: capitalize;
+    font-family:'Quicksand', sans-serif ;
+    color: 'Quicksand', sans-serif;
+    line-height: 3rem;
+  }
+  
+  h4 {
+    color: 'Quicksand', sans-serif ;
+    font-family: 'Quicksand', sans-serif;
+    text-transform: capitalize;
+    font-size: 1.125rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+  }
+  
+  h5 {
+    color:black;
+    text-transform: capitalize;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+  
+  p {
+    font-size: 1rem;
+    color: #b0b0b0;
+    font-weight: 400;
+    line-height: 1.75rem;
+    letter-spacing: 1px;
+  }
+  
+  .main-btn {
+    display: inline-block;
+    padding: 0.625rem 1.875rem;
+    line-height: 1.5625rem;
+    background-color: #FFC222;
+    border: 0.1875rem solid #FFC222;
+    color:black;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    border-radius: 0.5rem;
+    transition: all .4s ease-out 0s;
+  }
+  
+  .main-btn:hover {
+    background-color: transparent;
+    color: #FFC222;
+  }
+  
+  .wrapper {
+    padding-top: 4.25rem;
+    padding-bottom: 4.25rem;
+  }
+  
+  .text-content {
+    width: 70%;
+    margin: auto;
+  }
+  
+ 
+ 
+  
+  
+  .navigation-wrap .main-btn{
+    padding:0.3125rem 1.4375rem;
+    box-shadow: none;
+    margin-left:0.625rem;
+  }
 
-}
-#btn{
-    border-radius: 15px;
-}
+  .homefeels{
+    color: #FFC222;
+    margin-right: 1250px;
+    text-shadow: 1px 0 6px #000;
+    margin-bottom: 3px;
+  }
 
-body {
-    position: relative;
-}
 
-#homeimg {
+  
+  
+  
+
+  .top-banner{
+    background:url('https://img.freepik.com/free-photo/delicious-healthy-asian-food-gray-textured-background-with-copy-space_24972-1021.jpg') no-repeat center;
     background-repeat: no-repeat;
     height: 90vh;
     width: 100%;
@@ -29,37 +123,37 @@ body {
     align-items: flex-start;
     justify-content: center;
     margin-top: -56px; 
+  }
+  .top-banner p{
+    color:white;
+  }
+
+  #ImgApi{
+    margin-left: 400px;
+    margin-top: 10px;
 }
 
-#Display {
-    position: absolute;
-    top: 35%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-family: cursive;
-    text-align: center;
-    margin-bottom: 300px;
-}
+#titleApi{
 
-#navbar {
-    background-color: black;
+    margin-left: 450px;
+   
 }
+#ApiData{
+    margin-left: 300px;
 
-#navbar a.nav-link {
-    color: white;
-    margin-left: 50px;
-    text-align: end;
+
+}
+#RecipeContainer {
+    margin-top: 20px;
+    z-index: 1; 
     
 }
-.navbar-nav {
-    margin-left: auto;
+body {
+    position: relative;
 }
 
-#mynavbar{
-    margin-left: 40%;
-    
-}
+  
+
 
 #card {
     position: absolute;
@@ -76,15 +170,7 @@ body {
 }
 
 
-#Display2 {
-    position: absolute;
-    top: 25%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-family: cursive;
-    text-align: center;
-}
+
 
 #Card1{
     position: absolute;
@@ -108,29 +194,4 @@ body {
     padding: 20px;
     text-align: center;
 }
-
-#RecipeContainer {
-    margin-top: 20px;
-    z-index: 1; 
-    background-image: url("https://hungerbay.com/assets/images/b6.jpg");
-}
-#ImgApi{
-    margin-left: 400px;
-    margin-top: 10px;
-}
-
-#titleApi{
-    color: white;
-    margin-left: 450px;
-    font-family: cursive;
-}
-#ApiData{
-    color: white;
-    margin-left: 300px;
-    font-family: cursive;
-
-}
-
-
-
 

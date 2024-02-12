@@ -24,22 +24,22 @@ const fetchApi = (event) => {
 }
 
 const displayRelatedRecipes = (recipes) => {
-    const relatedRecipeContainer = document.getElementById('RecipeContainer');
-    relatedRecipeContainer.innerHTML = `
-        <h3>Related Recipes</h3>
-        <div class="row">
-            ${recipes.map(recipe => `
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">${recipe.title}</h5>
-                            <button class="btn btn-primary" onclick="displayRecipeDetails(${recipe.id})">View Recipe</button>
-                        </div>
-                    </div>
-                </div>
-            `).join('')}
-        </div>
-    `;
+  const relatedRecipeContainer = document.getElementById('RecipeContainer');
+  relatedRecipeContainer.innerHTML = `
+      <h3>Related Recipes</h3>
+      <div class="row">
+          ${recipes.map(recipe => `
+              <div class="col-md-4 mb-4">
+                  <div class="card">
+                      <div class="card-body">
+                          <h5 class="card-title">${recipe.title}</h5>
+                          <button class="main-btn" onclick="displayRecipeDetails(${recipe.id})">View Recipe</button>
+                      </div>
+                  </div>
+              </div>
+          `).join('')}
+      </div>
+  `;
 }
 
 const displayRecipeDetails = (id) => {
@@ -48,7 +48,7 @@ const displayRecipeDetails = (id) => {
         .then(recipe => {
             const RecipeData = document.getElementById('RecipeContainer');
             RecipeData.innerHTML = `
-                <h3 id="titleApi">${recipe.title}</h3>
+                <h2 id="titleApi">${recipe.title}</h2>
                 <img src="${recipe.image}" alt="${recipe.title}" id="ImgApi">
                 <div id="ApiData">
                     <p class="card-text">Ready in ${recipe.readyInMinutes} minutes </p>
