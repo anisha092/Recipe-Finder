@@ -23,6 +23,8 @@ const fetchApi = (event) => {
         });
 }
 
+
+
 const displayRelatedRecipes = (recipes) => {
   const relatedRecipeContainer = document.getElementById('RecipeContainer');
   relatedRecipeContainer.innerHTML = `
@@ -46,18 +48,41 @@ const displayRecipeDetails = (id) => {
     fetch(`https://api.spoonacular.com/recipes/${id}/information?apiKey=${KeyApi}`)
         .then(response => response.json())
         .then(recipe => {
-            const RecipeData = document.getElementById('RecipeContainer');
-            RecipeData.innerHTML = `
-                <h2 id="titleApi">${recipe.title}</h2>
-                <img src="${recipe.image}" alt="${recipe.title}" id="ImgApi">
-                <div id="ApiData">
-                    <p class="card-text">Ready in ${recipe.readyInMinutes} minutes </p>
-                    <h4>Instructions for Recipe</h4>
-                    <p>${recipe.instructions}</p>
-                </div>
-            `;
+            const modalContent = document.getElementById('modalContent');
+            const modal = new bootstrap.Modal(document.getElementById('recipeModal'));
+  
+            if (modalContent) {
+                modalContent.innerHTML = `
+                    <div class="text-center">
+                      <h2 id="titleApi" class="modal-title text-left">${recipe.title}</h2>
+                      <img src="${recipe.image}" alt="${recipe.title}" class="img-fluid rounded mx-auto d-block" id="ImgApi">
+                    </div>
+                    <div class="mt-3">
+                      <p class="card-text text-center">Ready in ${recipe.readyInMinutes} minutes </p>
+                      <h4 class="text-center">Instructions for Recipe</h4>
+                      <p class="modal-text text-left">${recipe.instructions}</p>
+                    </div>
+                `;
+  
+                modal.show();
+            } else {
+                console.error("Modal content Error ");
+            }
         })
         .catch(error => {
-            console.log("Error fetching recipe details", error);
+            console.error("Error fetching recipe details", error);
         });
+  }
+  
+
+const closeModal = () => {
+  const modal = new bootstrap.Modal(document.getElementById('recipeModal'));
+  modal.hide();
 }
+
+
+
+
+
+
+
